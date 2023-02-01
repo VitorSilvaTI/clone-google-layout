@@ -1,0 +1,338 @@
+@charset "UTF-8";
+
+/* Geral */
+
+
+:root {
+    --color-anchor: #1A0DAB;
+    --border-color: #EBEBEB;
+    --border-input: #DFE1E5;
+    --color-icons: #808080;
+    --color-text: #5F6368;
+    --anchor-active: #1A73EB;
+    --color-text-result: #70757A;
+    --color-reference-link: #3C4043;
+    --color-text-button: #FFFFFF;
+    --about-text: #222222;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+a, a:visited {
+    color: var(--color-anchor);
+}
+
+header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+#input-box {
+    padding-top: 20px;
+    padding-bottom: 9px;
+}
+
+#input-box img {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 92px;
+}
+
+
+#input-box form {
+    position: relative;
+    display: inline-block;
+}
+
+#input-box form input {
+    width: 597px;
+    height: 44px;
+    font-size: 16px;
+    padding: 0 21px;
+    border-radius: 22px;
+    margin-left: 146px;
+    border: 1px solid var(--border-input);
+}
+
+.magnify-glasses,
+.magnify-glasses-menu,
+.key-board,
+.mic,
+.picture,
+.map-maker,
+.film-play {
+    font-size: 18px;
+    color: var(--color-icons);
+}
+
+.magnify-glasses,
+.key-board,
+.mic {
+    position: absolute;
+    top: 12px;
+    cursor: pointer;
+}
+
+.magnify-glasses {
+    right: 18px;
+}
+
+.key-board {
+    right: 53px;
+}
+
+.mic {
+    right: 88px;
+}
+
+
+/* nav bar */
+
+#links-list {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 146px;
+}
+
+#links-list li {
+    display: inline-block;    
+    padding: 0 11px;
+}
+
+#links-list li a {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--color-text);
+    padding-bottom: 12px;
+    text-decoration: none;
+}
+
+#links-list li a:hover {
+    color: var(--anchor-active) ;
+}
+
+.active {
+    border-bottom: 3px solid var(--anchor-active);
+}
+
+#links-list .active a {
+    color: var(--anchor-active);
+}
+
+/* corpo do site */
+
+.container {
+    display: flex;
+    padding-left: 165px;
+    padding-right: 70px;
+}
+
+main {
+    flex: 2 1 0;
+    padding-right: 35px;
+}
+
+aside {
+    position: relative;
+    flex:  1 1 0;
+    min-width: 460px;
+    margin-top: 50px;
+}
+
+/* Conteúdo principal */
+
+#results {
+    color: var(--color-text-result);
+}
+
+.search-result-box {
+    margin-bottom: 10px;
+}
+
+
+.container .ref-link {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    color: var(--color-reference-link);
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.triangle {
+    position: absolute;
+    top: 7px;
+    right: -15px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--color-reference-link);
+}
+
+.main-link {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.main-link:hover {
+    text-decoration: underline;
+}
+
+.search-result-desc {
+    font-size: 14px;
+    color: var(--color-reference-link);
+    line-height: 1.57;
+    margin: 5px 0;
+}
+ 
+.info-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.info {
+    flex: 1 1 1;
+    width: 50%;
+    color: var(--color-text-result);
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.info-title {
+    font-weight: bold;
+}
+
+.related-results ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 5px 0;
+}
+
+.related-results li {
+    display: inline-block;
+}
+
+.related-results li a {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Galeria de imagens */
+
+.gallery-box {
+    position: relative;
+    width: 100%;
+    height: 186px;
+}
+
+.first-img {
+    width: 149px;
+    height: 186px;
+    background: url('../images/tree.jpg');
+    background-size: cover;
+    background-position: right;
+    border-top-left-radius: 10px;
+}
+
+.gallery {
+    position: absolute;
+    top: 0;
+    left: 149px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 186px;
+    width: calc(100% - 149px);
+}
+
+.gallery div {
+    height: 93px;
+    width: 33.33%;
+    background-position: center;
+    background-size: cover;
+}
+
+.gallery-img1 {
+    background: url('../images/lua.jpg');    
+}
+
+.gallery-img2 {
+    background: url('../images/nezuko.jpg');
+}
+
+.gallery-img3 {
+    background: url('../images/rachael.jpg');
+}
+
+.gallery-img4 {
+    background: url('../images/shinobu-kocho.jpg');
+}
+
+.gallery-img5 {
+    background: url('../images/demon-slayer-team.jpg');
+}
+
+.gallery-img6 {
+    background: url('../images/jp.jpg');
+}
+
+a.moreing-btn {
+    position: absolute;
+    bottom: 0;
+    right: 6px;
+    right: 0;
+    padding: 10px;
+    font-size: 13px;
+    color: var(--color-text-button);
+    text-decoration: none;
+    border-top-left-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.moreing-btn span {
+    margin-right: 5px;
+}
+
+/* Infos aside */
+
+.about-box {
+    border: 1px solid var(--border-color);
+}
+
+.name-box {
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 15px;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.role {
+    color: var(--color-text-result);
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 14px;
+    color: var(--about-text);
+    line-height: 1.57;
+    padding: 0 15px;
+}
+
+.about-text span {
+    font-weight: bold;
+}
