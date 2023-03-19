@@ -68,26 +68,24 @@ header {
     color: var(--color-icons);
 }
 
-.magnify-glasses,
-.key-board,
-.mic {
+form {
+    position: relative;
+}
+
+.aux-icons {
     position: absolute;
-    top: 12px;
+    top: 15px;
+    right: 15px;
+}
+
+i {
+    color: #444;
+}
+
+.aux-icons i {
     cursor: pointer;
+    margin-left: 10px;
 }
-
-.magnify-glasses {
-    right: 18px;
-}
-
-.key-board {
-    right: 53px;
-}
-
-.mic {
-    right: 88px;
-}
-
 
 /* nav bar */
 
@@ -109,6 +107,10 @@ header {
     color: var(--color-text);
     padding-bottom: 12px;
     text-decoration: none;
+}
+
+#links-list i {
+    font-size: 15px;
 }
 
 #links-list li a:hover {
